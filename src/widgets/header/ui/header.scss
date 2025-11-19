@@ -3,7 +3,10 @@
 
 .header {
   $self: &;
-  position: relative;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 2;
   background-color: map.get(constants.$colors, "black");
   height: 48px;
