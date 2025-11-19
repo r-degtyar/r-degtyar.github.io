@@ -12,10 +12,10 @@
   background-size:
     330px auto,
     cover;
-  height: 450px;
+  min-height: 450px;
 
   @media screen and (min-width: map.get(constants.$breakpoints, "sm")) {
-    height: 420px;
+    min-height: 420px;
     align-items: center;
     background-position:
       125% center,
@@ -23,7 +23,7 @@
   }
 
   @media screen and (min-width: map.get(constants.$breakpoints, "md")) {
-    height: 490px;
+    min-height: 490px;
     padding: 0 80px;
     background-position:
       93% 67%,
