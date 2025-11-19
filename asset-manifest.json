@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/r-degtyar.github.io/static/css/main.b5a0347a.css",
+    "main.css": "/r-degtyar.github.io/static/css/main.82c439ac.css",
     "main.js": "/r-degtyar.github.io/static/js/main.cf4681a4.js",
     "static/media/logo.svg": "/r-degtyar.github.io/static/media/logo.370e65d6c374b144e1cbb1e9c7468971.svg",
     "index.html": "/r-degtyar.github.io/index.html",
     "static/media/basket.svg": "/r-degtyar.github.io/static/media/basket.63ab0025d016fc0e2590641cd0916437.svg",
-    "main.b5a0347a.css.map": "/r-degtyar.github.io/static/css/main.b5a0347a.css.map",
+    "main.82c439ac.css.map": "/r-degtyar.github.io/static/css/main.82c439ac.css.map",
     "main.cf4681a4.js.map": "/r-degtyar.github.io/static/js/main.cf4681a4.js.map"
   },
   "entrypoints": [
-    "static/css/main.b5a0347a.css",
+    "static/css/main.82c439ac.css",
     "static/js/main.cf4681a4.js"
   ]
 }
