@@ -1,0 +1,143 @@
+{
+  "menu": [
+    {
+      "id": 1,
+      "name": "Home",
+      "href": "/"
+    },
+    {
+      "id": 2,
+      "name": "Products",
+      "href": "/products"
+    }
+  ],
+  "intro": {
+    "title": "Discover the vast expanses of space",
+    "description": "Where the possibilities are endless!",
+    "images": {
+      "earth": {
+        "webp": {
+          "1x": "/assets/earth.webp",
+          "2x": "/assets/earth@2x.webp"
+        },
+        "avif": {
+          "1x": "/assets/earth.avif",
+          "2x": "/assets/earth@2x.avif"
+        }
+      },
+      "intro-bg": {
+        "webp": {
+          "1x": "/assets/intro-bg.webp",
+          "2x": "/assets/intro-bg@2x.webp"
+        },
+        "avif": {
+          "1x": "/assets/intro-bg.avif",
+          "2x": "/assets/intro-bg@2x.avif"
+        }
+      }
+    },
+    "link": {
+      "text": "Learn more",
+      "href": "/intro"
+    }
+  },
+  "offers": [
+    {
+      "id": 1,
+      "name": "Move the borders of reality!",
+      "description": "Go on a space adventure ",
+      "image": {
+        "webp": {
+          "1x": "/assets/offer1.webp",
+          "2x": "/assets/offer1@2x.webp"
+        },
+        "avif": {
+          "1x": "/assets/offer1.avif",
+          "2x": "/assets/offer1@2x.avif"
+        }
+      },
+      "link": {
+        "text": "Learn more",
+        "href": "/offers/1"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Space is not just stars and planets",
+      "description": "Go on a space adventure",
+      "image": {
+        "webp": {
+          "1x": "/assets/offer2.webp",
+          "2x": "/assets/offer2@2x.webp"
+        },
+        "avif": {
+          "1x": "/assets/offer2.avif",
+          "2x": "/assets/offer2@2x.avif"
+        }
+      },
+      "link": {
+        "text": "Learn more",
+        "href": "/offers/2"
+      }
+    },
+    {
+      "id": 3,
+      "name": "For those who dream of stars",
+      "description": "Our offer: make your dream come true",
+      "image": {
+        "webp": {
+          "1x": "/assets/offer3.webp",
+          "2x": "/assets/offer3@2x.webp"
+        },
+        "avif": {
+          "1x": "/assets/offer3.avif",
+          "2x": "/assets/offer3@2x.avif"
+        }
+      },
+      "link": {
+        "text": "Learn more",
+        "href": "/offers/3"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Fulfill your fantastic dreams",
+      "description": "Space has never been so close",
+      "image": {
+        "webp": {
+          "1x": "/assets/offer4.webp",
+          "2x": "/assets/offer4@2x.webp"
+        },
+        "avif": {
+          "1x": "/assets/offer4.avif",
+          "2x": "/assets/offer4@2x.avif"
+        }
+      },
+      "link": {
+        "text": "Learn more",
+        "href": "/offers/3"
+      }
+    }
+  ],
+  "info": {
+    "title": "Embark on a space journey",
+    "description": "Travelling into space is one of the most exciting and unforgettable adventures that can change your life forever. And if you have ever dreamed of exploring stars, planets and galaxies, then our company is ready to help you realize this dream. We offer a unique experience that will allow you to go on a space journey and see all the secrets of the universe. We guarantee that every moment in space will be filled with incredible impressions, excitement and new discoveries. Our team of professionals takes care of your safety and comfort so that you can fully enjoy your adventure in space. We offer various options for space excursions.",
+    "details": {
+      "title": "Read more",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, illum! Quaerat, molestias? Velit iusto repudiandae consequatur, consequuntur earum animi quis, incidunt modi vel totam nulla deleniti necessitatibus, vitae reprehenderit alias."
+    }
+  },
+  "footer": {
+    "text": "Exciting space adventure!",
+    "image": {
+      "webp": {
+        "1x": "/assets/rocket.webp",
+        "2x": "/assets/rocket@2x.webp"
+      },
+      "avif": {
+        "1x": "/assets/rocket.avif",
+        "2x": "/assets/rocket@2x.avif"
+      }
+    }
+  }
+}

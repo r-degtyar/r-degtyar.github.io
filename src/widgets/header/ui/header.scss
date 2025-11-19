@@ -1,0 +1,96 @@
+@use "sass:map";
+@use "@/shared/sass/constants.scss";
+
+.header {
+  $self: &;
+  position: relative;
+  z-index: 2;
+  background-color: map.get(constants.$colors, "black");
+  height: 48px;
+
+  @media screen and (min-width: map.get(constants.$breakpoints, "sm")) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 0 30px;
+  }
+
+  @media screen and (min-width: map.get(constants.$breakpoints, "md")) {
+    padding: 0 80px;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
+    background-color: map.get(constants.$colors, "black");
+    position: relative;
+    z-index: 100;
+
+    @media screen and (min-width: map.get(constants.$breakpoints, "sm")) {
+      padding: 0;
+    }
+  }
+
+  &__logo {
+    width: 71px;
+
+    @media screen and (min-width: map.get(constants.$breakpoints, "md")) {
+      width: 100%;
+    }
+  }
+
+  &__burger {
+    position: relative;
+    width: 22.5px;
+    height: 17px;
+
+    @media screen and (min-width: map.get(constants.$breakpoints, "sm")) {
+      display: none;
+    }
+  }
+
+  &__burger-line {
+    position: absolute;
+    display: block;
+    width: 22.5px;
+    height: 2px;
+    background-color: map.get(constants.$colors, "white");
+    border-radius: 1.5px;
+    transition: transform 0.3s ease, opacity 0.3s ease, translateY 0.3s ease;
+
+    &:first-child {
+      top: 0;
+      transform-origin: left center;
+    }
+
+    #{$self}__burger_open &:first-child {
+      transform: rotate(35deg);
+      width: 27px;
+    }
+
+    &:nth-child(2) {
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+    }
+
+    #{$self}__burger_open &:nth-child(2) {
+      opacity: 0;
+      transform: translateX(10px);
+    }
+
+    &:last-child {
+      bottom: 0;
+      transform-origin: left center;
+    }
+
+    #{$self}__burger_open &:last-child {
+      transform: rotate(-35deg);
+      width: 27px;
+    }
+  }
+}

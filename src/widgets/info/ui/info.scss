@@ -1,0 +1,72 @@
+@use "sass:map";
+@use "@/shared/sass/constants.scss";
+
+.info {
+  padding-bottom: 50px;
+
+  @media screen and (min-width: map.get(constants.$breakpoints, "sm")) {
+    padding-bottom: 55px;
+  }
+
+  @media screen and (min-width: map.get(constants.$breakpoints, "md")) {
+    padding-bottom: 60px;
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 800;
+    color: map.get(constants.$colors, "white");
+
+    @media screen and (min-width: map.get(constants.$breakpoints, "sm")) {
+      font-size: 24px;
+    }
+
+    @media screen and (min-width: map.get(constants.$breakpoints, "md")) {
+      font-size: 32px;
+    }
+  }
+
+  &__description {
+    font-size: 14px;
+    font-weight: 800;
+    color: map.get(constants.$colors, "white");
+    opacity: 0.6;
+    margin-top: 25px;
+    line-height: 1.1;
+
+    @media screen and (min-width: map.get(constants.$breakpoints, "sm")) {
+      font-size: 16px;
+      margin-top: 20px;
+    }
+
+    @media screen and (min-width: map.get(constants.$breakpoints, "md")) {
+      font-size: 20px;
+      margin-top: 20px;
+    }
+  }
+
+  &__details {
+    margin-top: 5px;
+
+    @media screen and (min-width: map.get(constants.$breakpoints, "md")) {
+      margin-top: 20px;
+    }
+  }
+
+  &__summary {
+    font-size: 14px;
+    font-weight: 800;
+    color: map.get(constants.$colors, "yellow");
+    margin-top: 20px;
+    cursor: pointer;
+    display: inline-block;
+
+    @media screen and (min-width: map.get(constants.$breakpoints, "md")) {
+      font-size: 20px;
+    }
+
+    &::marker {
+      content: '';
+    }
+  }
+}

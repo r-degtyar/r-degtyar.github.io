@@ -1,0 +1,150 @@
+@use "sass:map";
+@use "@/shared/sass/constants.scss";
+
+.offers {
+  padding: 50px 0;
+
+  @media screen and (min-width: map.get(constants.$breakpoints, "sm")) {
+    padding: 55px 0 65px 0;
+  }
+
+  @media screen and (min-width: map.get(constants.$breakpoints, "md")) {
+    padding: 60px 0;
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 800;
+    color: map.get(constants.$colors, "white");
+
+    @media screen and (min-width: map.get(constants.$breakpoints, "sm")) {
+      font-size: 24px;
+    }
+
+    @media screen and (min-width: map.get(constants.$breakpoints, "md")) {
+      font-size: 32px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    gap: 30px;
+    padding: 0;
+    margin-top: 30px;
+
+    @media screen and (min-width: map.get(constants.$breakpoints, "sm")) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+
+    @media screen and (min-width: map.get(constants.$breakpoints, "md")) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+      margin-top: 45px;
+    }
+  }
+}
+
+.offers__item {
+  $self: &;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  border-radius: 10px;
+  min-height: 350px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      190.34deg,
+      map.get(constants.$colors, "intro-gradient-start") 0%,
+      map.get(constants.$colors, "intro-gradient-end") 79%
+    );
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+  }
+
+  &-content {
+    max-width: 490px;
+    z-index: 1;
+    padding: 0 30px 35px 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+
+    @media screen and (min-width: map.get(constants.$breakpoints, "sm")) {
+      padding: 0 30px 20px 30px;
+    }
+
+    @media screen and (min-width: map.get(constants.$breakpoints, "md")) {
+      max-width: 490px;
+      padding: 55px 35px 35px 35px;
+    }
+  }
+
+  &-title {
+    font-size: 40px;
+    font-weight: 800;
+    color: map.get(constants.$colors, "white");
+    margin-top: auto;
+
+    @media screen and (min-width: map.get(constants.$breakpoints, "md")) {
+      font-size: 46px;
+      max-width: 67%;
+      margin-top: unset;
+    }
+  }
+
+  &-description {
+    font-weight: 800;
+    color: map.get(constants.$colors, "white");
+    margin-top: 25px;
+
+    @media screen and (min-width: map.get(constants.$breakpoints, "md")) {
+      font-size: 24px;
+      margin-top: 22px;
+    }
+  }
+
+  &:first-of-type,
+  &:last-of-type {
+    @media screen and (min-width: map.get(constants.$breakpoints, "md")) {
+      grid-column: 1 / 3;
+    }
+
+    #{$self}-content {
+      @media screen and (min-width: map.get(constants.$breakpoints, "md")) {
+        max-width: 670px;
+        padding: 35px;
+      }
+    }
+
+    #{$self}-title {
+      @media screen and (min-width: map.get(constants.$breakpoints, "md")) {
+        font-size: 74px;
+        max-width: 100%;
+      }
+    }
+
+    #{$self}-description {
+      @media screen and (min-width: map.get(constants.$breakpoints, "md")) {
+        font-size: 26px;
+      }
+    }
+  }
+}

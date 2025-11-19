@@ -1,0 +1,112 @@
+@use "sass:map";
+@use "@/shared/sass/constants.scss";
+
+.menu {
+  z-index: -1;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: map.get(constants.$colors, "black");
+  z-index: -1;
+  margin: 0;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in;
+  padding: 20px;
+
+  @media screen and (min-width: map.get(constants.$breakpoints, "sm")) {
+    position: relative;
+    z-index: initial;
+    margin: 0;
+    transform: initial;
+    top: initial;
+    left: initial;
+    width: initial;
+    padding: 0;
+  }
+
+  &_open {
+    transition: transform 0.3s ease-out;
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @media screen and (min-width: map.get(constants.$breakpoints, "sm")) {
+      gap: 60px;
+      flex-direction: row;
+      padding-right: 20px;
+    }
+
+    @media screen and (min-width: map.get(constants.$breakpoints, "md")) {
+      padding-right: 10px;
+    }
+  }
+
+  &__item {
+    font-weight: 700;
+
+    @media screen and (min-width: map.get(constants.$breakpoints, "md")) {
+      font-size: 18px;
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: inline-block;
+    color: map.get(constants.$colors, "white");
+    text-decoration: none;
+  }
+
+  &__link_type_text::after {
+    content: attr(data-text);
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      98.25deg,
+      map.get(constants.$colors, "yellow") 18.56%,
+      map.get(constants.$colors, "pink") 76.02%
+    );
+    background-clip: text;
+    color: transparent;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  &__link_type_text:hover::after {
+    opacity: 1;
+  }
+
+  &__link_type_basket svg {
+    width: 24px;
+    aspect-ratio: 1/1;
+
+    stop {
+      transition: stop-color 0.3s ease;
+    }
+
+    & stop:first-of-type {
+      stop-color: map.get(constants.$colors, "white");
+    }
+    & stop:last-of-type {
+      stop-color: map.get(constants.$colors, "white");
+    }
+  }
+
+  &__link_type_basket:hover svg {
+    & stop:first-of-type {
+      stop-color: map.get(constants.$colors, "yellow");
+    }
+    & stop:last-of-type {
+      stop-color: map.get(constants.$colors, "pink");
+    }
+  }
+}

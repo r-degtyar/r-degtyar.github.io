@@ -1,0 +1,107 @@
+@use "sass:map";
+@use "@/shared/sass/constants.scss";
+
+.intro {
+  display: flex;
+  align-items: end;
+  position: relative;
+  background-repeat: no-repeat, no-repeat;
+  background-position:
+    50% -115px,
+    center;
+  background-size:
+    330px auto,
+    cover;
+  height: 450px;
+
+  @media screen and (min-width: map.get(constants.$breakpoints, "sm")) {
+    height: 420px;
+    align-items: center;
+    background-position:
+      125% center,
+      center;
+  }
+
+  @media screen and (min-width: map.get(constants.$breakpoints, "md")) {
+    height: 490px;
+    padding: 0 80px;
+    background-position:
+      93% 67%,
+      center;
+    justify-content: start;
+    background-size: auto, cover;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+      190.34deg,
+      map.get(constants.$colors, "intro-gradient-start") 0%,
+      map.get(constants.$colors, "intro-gradient-end") 79%
+    );
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 1;
+    align-items: center;
+    padding: 0 30px 40px 30px;
+
+    @media screen and (min-width: map.get(constants.$breakpoints, "sm")) {
+      max-width: 420px;
+      padding: 0 0 0 30px;
+      align-items: start;
+    }
+
+    @media screen and (min-width: map.get(constants.$breakpoints, "md")) {
+      max-width: 725px;
+      padding: 0 0 30px 0;
+    }
+  }
+
+  &__title {
+    font-size: 36px;
+    font-weight: 800;
+    color: map.get(constants.$colors, "white");
+
+    @media screen and (min-width: map.get(constants.$breakpoints, "sm")) {
+      font-size: 48px;
+    }
+
+    @media screen and (min-width: map.get(constants.$breakpoints, "md")) {
+      font-size: 72px;
+      font-weight: 900;
+    }
+  }
+
+  &__title span {
+    color: map.get(constants.$colors, "pink");
+  }
+
+  &__description {
+    color: map.get(constants.$colors, "white");
+    font-weight: 800;
+
+    @media screen and (min-width: map.get(constants.$breakpoints, "sm")) {
+      font-size: 22px;
+    }
+
+    @media screen and (min-width: map.get(constants.$breakpoints, "md")) {
+      font-size: 32px;
+    }
+  }
+
+  &__description span {
+    color: map.get(constants.$colors, "yellow");
+  }
+}
