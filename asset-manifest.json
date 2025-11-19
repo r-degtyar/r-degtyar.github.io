@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/r-degtyar.github.io/static/css/main.bc5ed82c.css",
-    "main.js": "/r-degtyar.github.io/static/js/main.cf4681a4.js",
-    "static/media/logo.svg": "/r-degtyar.github.io/static/media/logo.370e65d6c374b144e1cbb1e9c7468971.svg",
-    "index.html": "/r-degtyar.github.io/index.html",
-    "static/media/basket.svg": "/r-degtyar.github.io/static/media/basket.63ab0025d016fc0e2590641cd0916437.svg",
-    "main.bc5ed82c.css.map": "/r-degtyar.github.io/static/css/main.bc5ed82c.css.map",
-    "main.cf4681a4.js.map": "/r-degtyar.github.io/static/js/main.cf4681a4.js.map"
+    "main.css": "/static/css/main.fb1d1da6.css",
+    "main.js": "/static/js/main.accad966.js",
+    "static/media/logo.svg": "/static/media/logo.370e65d6c374b144e1cbb1e9c7468971.svg",
+    "index.html": "/index.html",
+    "static/media/basket.svg": "/static/media/basket.63ab0025d016fc0e2590641cd0916437.svg",
+    "main.fb1d1da6.css.map": "/static/css/main.fb1d1da6.css.map",
+    "main.accad966.js.map": "/static/js/main.accad966.js.map"
   },
   "entrypoints": [
-    "static/css/main.bc5ed82c.css",
-    "static/js/main.cf4681a4.js"
+    "static/css/main.fb1d1da6.css",
+    "static/js/main.accad966.js"
   ]
 }
