@@ -29,8 +29,7 @@
   &__description {
     font-size: 14px;
     font-weight: 800;
-    color: map.get(constants.$colors, "white");
-    opacity: 0.6;
+    color: rgba(map.get(constants.$colors, "white"), 0.6);
     margin-top: 25px;
     line-height: 1.1;
 
