@@ -73,9 +73,11 @@
     font-size: 36px;
     font-weight: 800;
     color: map.get(constants.$colors, "white");
+    text-align: center;
 
     @media screen and (min-width: map.get(constants.$breakpoints, "sm")) {
       font-size: 48px;
+      text-align: left;
     }
 
     @media screen and (min-width: map.get(constants.$breakpoints, "md")) {
