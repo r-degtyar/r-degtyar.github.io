@@ -18,47 +18,73 @@
     }
   }
 
-  &__description {
-    margin-top: 25px;
+  &__description,
+  &__details-description {
+    overflow: hidden;
     line-height: 1.1;
     color: rgba(map.get(constants.$colors, "white"), 0.6);
     font-size: 14px;
     font-weight: 800;
 
     @media screen and (min-width: map.get(constants.$breakpoints, "sm")) {
-      margin-top: 20px;
       font-size: 16px;
     }
 
     @media screen and (min-width: map.get(constants.$breakpoints, "md")) {
-      margin-top: 20px;
       font-size: 20px;
+    }
+  }
+
+  &__description {
+    margin-top: 25px;
+
+    @media screen and (min-width: map.get(constants.$breakpoints, "sm")) {
+      margin-top: 20px;
+    }
+
+    @media screen and (min-width: map.get(constants.$breakpoints, "md")) {
+      margin-top: 20px;
     }
   }
 
   &__details {
-    margin-top: 5px;
-
-    @media screen and (min-width: map.get(constants.$breakpoints, "md")) {
-      margin-top: 20px;
-    }
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s ease-out;
   }
 
-  &__summary {
+  &__checkbox {
+    display: none;
+  }
+
+  &__checkbox:checked ~ &__details {
+    grid-template-rows: 1fr;
+  }
+
+  &__label {
     display: inline-block;
     margin-top: 20px;
     cursor: pointer;
-    color: map.get(constants.$colors, "yellow");
-    font-size: 14px;
-    font-weight: 800;
 
-    &::marker {
-      content: "";
+    &::after {
+      display: inline-block;
+      cursor: pointer;
+      color: map.get(constants.$colors, "yellow");
+      font-weight: 800;
+      content: attr(data-open);
+
+      @media screen and (min-width: map.get(constants.$breakpoints, "md")) {
+        font-size: 20px;
+      }
     }
 
     @media screen and (min-width: map.get(constants.$breakpoints, "md")) {
-      font-size: 20px;
+      margin-top: 30px;
     }
+  }
+
+  &__checkbox:checked ~ &__label::after {
+    content: attr(data-close);
   }
 
   @media screen and (min-width: map.get(constants.$breakpoints, "sm")) {

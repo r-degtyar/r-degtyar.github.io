@@ -7,7 +7,7 @@ export default function Header({ menu = [] }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleMenuClick = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setIsMenuOpen(isOpen => !isOpen);
   };
   return (
     <header className="header">

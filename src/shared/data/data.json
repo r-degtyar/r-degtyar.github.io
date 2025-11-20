@@ -123,8 +123,11 @@
     "title": "Embark on a space journey",
     "description": "Travelling into space is one of the most exciting and unforgettable adventures that can change your life forever. And if you have ever dreamed of exploring stars, planets and galaxies, then our company is ready to help you realize this dream. We offer a unique experience that will allow you to go on a space journey and see all the secrets of the universe. We guarantee that every moment in space will be filled with incredible impressions, excitement and new discoveries. Our team of professionals takes care of your safety and comfort so that you can fully enjoy your adventure in space. We offer various options for space excursions.",
     "details": {
-      "title": "Read more",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, illum! Quaerat, molestias? Velit iusto repudiandae consequatur, consequuntur earum animi quis, incidunt modi vel totam nulla deleniti necessitatibus, vitae reprehenderit alias."
+      "title": {
+        "open": "Read more",
+        "close": "Read less"
+      },
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, laudantium. Laudantium, dolor sapiente explicabo dolore exercitationem rerum nisi nobis sit dicta in amet dolores voluptate quaerat. Placeat id officiis nemo? Numquam, odio. Dolorem voluptatibus deserunt quidem quis explicabo facilis soluta blanditiis laboriosam nemo, quos dignissimos suscipit! Quo eos reiciendis earum maxime, nobis quae quasi nam similique? Cumque natus perspiciatis porro? Magnam repudiandae consectetur dolorem nihil, iusto corrupti aperiam expedita esse ipsum quibusdam perferendis dolorum aliquam cumque tempore magni, ducimus perspiciatis iste inventore reprehenderit ea? Numquam consequuntur nostrum ea. Sequi, velit. Natus obcaecati cumque voluptatibus non minima magnam nobis beatae. Ducimus deserunt error inventore. Facilis pariatur quo quibusdam architecto! Autem tenetur at, pariatur enim animi fugit aspernatur non consequuntur ullam blanditiis? Sit voluptates suscipit obcaecati laboriosam sapiente unde quisquam possimus veniam quo illum cum labore est ab nesciunt, non libero. Tempore, iure ex. Temporibus accusantium cupiditate dolore hic earum sunt enim."
     }
   },
   "footer": {
