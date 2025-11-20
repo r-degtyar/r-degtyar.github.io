@@ -8,6 +8,7 @@ const config = {
   rules: {
     "selector-class-pattern": null,
   },
+  ignoreFiles: ["node_modules/**/*.css", "build/**/*.css"],
 };
 
 export default config;
