@@ -132,7 +132,7 @@
     font-weight: 800;
 
     @media screen and (min-width: map.get(constants.$breakpoints, "md")) {
-      margin-top: unset;
+      margin-top: 0;
       max-width: 67%;
       font-size: 46px;
     }
