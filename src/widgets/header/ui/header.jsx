@@ -7,22 +7,25 @@ export default function Header({ menu = [] }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleMenuClick = () => {
-    setIsMenuOpen(isOpen => !isOpen);
+    setIsMenuOpen((isOpen) => !isOpen);
   };
   return (
     <header className="header">
       <div className="header__container">
-        <a href="/">
+        <a href="/" title="Home">
           <Logo className="header__logo" />
         </a>
         <button
           type="button"
           className={`header__burger ${isMenuOpen ? "header__burger_open" : ""}`}
           onClick={handleMenuClick}
+          title="Menu"
         >
-          {Array.from({ length: 3 }, (_, index) => (
-            <i key={index} className="header__burger-line" />
-          ))}
+          {Array.from({ length: 3 })
+            .fill(0)
+            .map((_, index) => (
+              <i key={index} className="header__burger-line" />
+            ))}
         </button>
       </div>
       <Menu menu={menu} isOpen={isMenuOpen} />
