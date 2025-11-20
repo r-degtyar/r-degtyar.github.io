@@ -5,6 +5,9 @@ const config = {
     "stylelint-prettier/recommended",
     "stylelint-config-concentric-order",
   ],
+  rules: {
+    "selector-class-pattern": null,
+  },
 };
 
 export default config;
