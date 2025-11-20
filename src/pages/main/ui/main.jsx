@@ -20,7 +20,7 @@ export default function Main() {
           link={data.intro.link}
           images={data.intro.images}
         />
-        <div className="main__container">
+        <div className="container">
           <Offers offers={data.offers} />
           <Info
             title={data.info.title}

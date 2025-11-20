@@ -1,0 +1,19 @@
+@use "sass:map";
+@use "@/shared/sass/constants";
+
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  max-width: map.get(constants.$breakpoints, "md");
+
+  @media screen and (min-width: map.get(constants.$breakpoints, "sm")) {
+    padding: 0 30px;
+  }
+
+  @media screen and (min-width: map.get(constants.$breakpoints, "md")) {
+    margin: 0 auto;
+    padding: 0 80px;
+    max-width: map.get(constants.$breakpoints, "md");
+  }
+}

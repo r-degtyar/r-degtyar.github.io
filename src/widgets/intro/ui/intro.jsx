@@ -17,18 +17,20 @@ export default function Intro({
 
   return (
     <section className="intro" style={{ backgroundImage: imageUrl }}>
-      <div className="intro__content">
-        <h1 className="intro__title">
-          {firstTitlePart} <span>{lastTitlePart}</span>
-        </h1>
-        <p className="intro__description">
-          {firstDescriptionPart} <span>{lastDescriptionPart}</span>
-        </p>
-        <Button
-          text={link.text}
-          href={link.href}
-          className="button_section_intro"
-        />
+      <div className="container">
+        <div className="intro__content">
+          <h1 className="intro__title">
+            {firstTitlePart} <span>{lastTitlePart}</span>
+          </h1>
+          <p className="intro__description">
+            {firstDescriptionPart} <span>{lastDescriptionPart}</span>
+          </p>
+          <Button
+            text={link.text}
+            href={link.href}
+            className="button_section_intro"
+          />
+        </div>
       </div>
     </section>
   );

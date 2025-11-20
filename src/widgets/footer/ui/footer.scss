@@ -2,14 +2,17 @@
 @use "@/shared/sass/constants";
 
 .footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: auto;
   background-color: map.get(constants.$colors, "black");
-  padding-bottom: 20px;
-  height: 125px;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+    padding-bottom: 20px;
+    height: 125px;
+  }
 
   &__text {
     color: map.get(constants.$colors, "yellow");
