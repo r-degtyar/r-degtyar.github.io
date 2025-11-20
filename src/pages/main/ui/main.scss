@@ -10,16 +10,16 @@
     map.get(constants.$colors, "blue-gradient-end") 100%
   );
   min-height: 100vh;
-}
 
-.main__container {
-  padding: 0 20px;
+  &__container {
+    padding: 0 20px;
 
-  @media screen and (min-width: map.get(constants.$breakpoints, "sm")) {
-    padding: 0 30px;
-  }
+    @media screen and (min-width: map.get(constants.$breakpoints, "sm")) {
+      padding: 0 30px;
+    }
 
-  @media screen and (min-width: map.get(constants.$breakpoints, "md")) {
-    padding: 0 80px;
+    @media screen and (min-width: map.get(constants.$breakpoints, "md")) {
+      padding: 0 80px;
+    }
   }
 }
