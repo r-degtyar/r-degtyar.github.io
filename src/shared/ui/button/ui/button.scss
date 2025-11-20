@@ -1,37 +1,32 @@
 @use "sass:map";
-@use "@/shared/sass/constants.scss";
+@use "@/shared/sass/constants";
 
 .button {
   display: inline-block;
-  padding: 7px 40px;
-  background-color: map.get(constants.$colors, "yellow");
-  color: map.get(constants.$colors, "black");
-  text-decoration: none;
-  border-radius: 100px;
-  font-weight: 700;
   transition:
     background-color 0.3s ease,
     border 0.3s ease,
     color 0.3s ease;
-
-  @media screen and (min-width: map.get(constants.$breakpoints, "md")) {
-    padding: 14px 40px;
-    font-size: 22px;
-  }
+  border-radius: 100px;
+  background-color: map.get(constants.$colors, "yellow");
+  padding: 7px 40px;
+  text-decoration: none;
+  color: map.get(constants.$colors, "black");
+  font-weight: 700;
 
   &:hover {
     background-color: rgba(map.get(constants.$colors, "yellow"), 0.6);
   }
 
   &_type_transparent {
+    border: 2px solid map.get(constants.$colors, "yellow");
     background-color: transparent;
     color: map.get(constants.$colors, "yellow");
-    border: 2px solid map.get(constants.$colors, "yellow");
   }
 
   &_type_transparent:hover {
-    background-color: transparent;
     border: 2px solid rgba(map.get(constants.$colors, "yellow"), 0.6);
+    background-color: transparent;
     color: rgba(map.get(constants.$colors, "yellow"), 0.6);
   }
 
@@ -50,5 +45,10 @@
 
   &_section_offers {
     margin-top: 25px;
+  }
+
+  @media screen and (min-width: map.get(constants.$breakpoints, "md")) {
+    padding: 14px 40px;
+    font-size: 22px;
   }
 }

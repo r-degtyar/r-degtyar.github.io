@@ -1,37 +1,26 @@
 @use "sass:map";
-@use "@/shared/sass/constants.scss";
+@use "@/shared/sass/constants";
 
 .header {
   $self: &;
+
   position: sticky;
   top: 0;
-  left: 0;
   right: 0;
+  left: 0;
   z-index: 2;
   background-color: map.get(constants.$colors, "black");
   height: 48px;
 
-  @media screen and (min-width: map.get(constants.$breakpoints, "sm")) {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 80px;
-    padding: 0 30px;
-  }
-
-  @media screen and (min-width: map.get(constants.$breakpoints, "md")) {
-    padding: 0 80px;
-  }
-
   &__container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-    padding: 0 20px;
-    background-color: map.get(constants.$colors, "black");
     position: relative;
+    align-items: center;
+    justify-content: space-between;
     z-index: 100;
+    background-color: map.get(constants.$colors, "black");
+    padding: 0 20px;
+    height: 100%;
 
     @media screen and (min-width: map.get(constants.$breakpoints, "sm")) {
       padding: 0;
@@ -57,22 +46,20 @@
   }
 
   &__burger-line {
-    position: absolute;
     display: block;
+    position: absolute;
+    transition:
+      transform 0.3s ease,
+      opacity 0.3s ease,
+      translatey 0.3s ease;
+    border-radius: 1.5px;
+    background-color: map.get(constants.$colors, "white");
     width: 22.5px;
     height: 2px;
-    background-color: map.get(constants.$colors, "white");
-    border-radius: 1.5px;
-    transition: transform 0.3s ease, opacity 0.3s ease, translateY 0.3s ease;
 
     &:first-child {
       top: 0;
       transform-origin: left center;
-    }
-
-    #{$self}__burger_open &:first-child {
-      transform: rotate(35deg);
-      width: 27px;
     }
 
     &:nth-child(2) {
@@ -81,19 +68,36 @@
       margin: auto 0;
     }
 
-    #{$self}__burger_open &:nth-child(2) {
-      opacity: 0;
-      transform: translateX(10px);
-    }
-
     &:last-child {
       bottom: 0;
       transform-origin: left center;
+    }
+
+    #{$self}__burger_open &:first-child {
+      transform: rotate(35deg);
+      width: 27px;
+    }
+
+    #{$self}__burger_open &:nth-child(2) {
+      transform: translateX(10px);
+      opacity: 0;
     }
 
     #{$self}__burger_open &:last-child {
       transform: rotate(-35deg);
       width: 27px;
     }
+  }
+
+  @media screen and (min-width: map.get(constants.$breakpoints, "sm")) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    height: 80px;
+  }
+
+  @media screen and (min-width: map.get(constants.$breakpoints, "md")) {
+    padding: 0 80px;
   }
 }
